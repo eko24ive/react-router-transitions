@@ -5,14 +5,14 @@ import App from './js/components/App.jsx';
 import About from './js/components/About.jsx';
 import Contact from './js/components/Contact.jsx';
 import NotFound from './js/components/NotFound.jsx';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group'
 
 class Root extends React.Component {
   constructor(props) {
     super(props);
 
-    this.currentPage = location.pathname;
+    this.currentPage = location.hash.replace("#","");
 
     this.pages = {
       '/': 0,
@@ -23,11 +23,11 @@ class Root extends React.Component {
 
 
   getDirection() {
-    let nextPage = location.pathname;
+    let nextPage = location.hash.replace("#","");
     let nextPageIndex = this.pages[nextPage];
     let currentPageIndex = this.pages[this.currentPage];
 
-    this.currentPage = location.pathname;
+    this.currentPage = location.hash.replace("#", "");
 
     if (currentPageIndex < nextPageIndex) {
       return 'rtl'
@@ -97,7 +97,7 @@ class Root extends React.Component {
               transitionEnterTimeout={this.getAnimationSpeed()}
               transitionLeaveTimeout={this.getAnimationSpeed()}
               >
-                <Switch key={location.key} location={location}>
+                <Switch key={location.pathname} location={location}>
                   <Route path='/' exact component={App}/>
                   <Route path='/about' component={About}/>
                   <Route path='/contact' component={Contact}/>
