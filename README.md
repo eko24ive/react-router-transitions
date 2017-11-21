@@ -1,3 +1,6 @@
+> PSA: This repository would be updated soon with more efficient demos and other improvements
+> Written at 16:46 21.11.2017 (UTC)
+
 # react-router-transitions
 Simple app to demonstrate how to handle condition-specific rtl and ltr transition between routes
 
