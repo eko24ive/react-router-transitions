@@ -1,4 +1,4 @@
-#### PSA: breaking changes of `react-transition-group` v2 causes some issues, I'm working on the fix.
+Please note that implementation of animation is compatible with `react-transition-group@1.x` only !
 
 # react-router-transitions
 Simple app to demonstrate how to handle condition-specific rtl and ltr transition between routes
