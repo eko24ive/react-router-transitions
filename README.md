@@ -1,5 +1,4 @@
-> PSA: This repository would be updated soon with more efficient demos and other improvements
-> Written at 16:46 21.11.2017 (UTC)
+#### PSA: breaking changes of `react-transition-group` v2 causes some issues, I'm working on the fix.
 
 # react-router-transitions
 Simple app to demonstrate how to handle condition-specific rtl and ltr transition between routes
